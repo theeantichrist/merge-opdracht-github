@@ -1,0 +1,8 @@
+.Longchicken{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 2rem;
+    background-color: rgb(221, 159, 13);
+    color: black;
+}
