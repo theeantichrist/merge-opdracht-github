@@ -1,0 +1,65 @@
+body {
+    margin: 0;
+    padding: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(135deg, #0f0c29, #302b63, #24243e); /* dark gradient for glow */
+    color: #ffffff;
+    line-height: 1.7;
+    text-align: center;
+}
+
+/* Glowing heading */
+h1 {
+    font-size: 3rem;
+    color: #00fff7;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-shadow: 
+        0 0 5px #00fff7,
+        0 0 10px #00fff7,
+        0 0 20px #00fff7,
+        0 0 40px #0ff,
+        0 0 80px #0ff;
+    margin-bottom: 30px;
+    animation: glow 2s ease-in-out infinite alternate;
+}
+
+/* Glowing paragraph */
+p {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 20px;
+    max-width: 800px;
+    margin: auto;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.2);
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #e0ffff;
+}
+
+/* Text glow animation */
+@keyframes glow {
+    0% { text-shadow: 0 0 5px #00fff7, 0 0 10px #00fff7, 0 0 20px #00fff7, 0 0 40px #0ff, 0 0 80px #0ff; }
+    50% { text-shadow: 0 0 10px #00fff7, 0 0 20px #00fff7, 0 0 30px #00fff7, 0 0 60px #0ff, 0 0 120px #0ff; }
+    100% { text-shadow: 0 0 5px #00fff7, 0 0 10px #00fff7, 0 0 20px #00fff7, 0 0 40px #0ff, 0 0 80px #0ff; }
+}
+
+/* Links glowing on hover */
+a {
+    color: #00fff7;
+    text-decoration: none;
+    transition: 0.3s;
+}
+a:hover {
+    text-shadow: 0 0 5px #00fff7, 0 0 10px #00fff7;
+}
+
+@media (max-width: 600px) {
+    h1 {
+        font-size: 2rem;
+    }
+    p {
+        font-size: 0.9rem;
+        padding: 15px;
+    }
+}
